@@ -21,6 +21,10 @@ public class DynamicSprite extends SolidSprite {
         this.direction = direction;
     }
 
+    /**
+     * Permet l'animation du DynamicSprite en fonction de la periode d'affichage ainsi que de la direction du Sprite
+     * @param g
+     */
     @Override
     public void draw(Graphics g) {
         long index = (System.currentTimeMillis() / timeBetweenFrame) % spriteSheetNumberOfColumns;
@@ -37,6 +41,11 @@ public class DynamicSprite extends SolidSprite {
         }
     }
 
+    /**
+     * Permet de détecter les collisions entre Sprite
+     * @param environment
+     * @return
+     */
     protected boolean isMovingPossible(ArrayList<Sprite> environment){
         Rectangle2D hitbox;
         switch (direction) {

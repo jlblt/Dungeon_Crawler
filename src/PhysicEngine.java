@@ -17,6 +17,9 @@ public class PhysicEngine implements Engine {
         this.environment = environment;
     }
 
+    /**
+     * Permet le mouvement du Sprite
+     */
     public void update(){
         for (DynamicSprite sprite : movingSpriteList) {
             sprite.moveIfPossible(environment);

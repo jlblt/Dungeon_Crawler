@@ -12,6 +12,10 @@ public class GameEngine implements Engine, KeyListener {
     public void keyTyped(KeyEvent e) {
     }
 
+    /**
+     * Change la direction du Sprite en fonction de la touche appuié
+     * @param e the event to be processed
+     */
     public void keyPressed(KeyEvent e) {
         switch (e.getKeyCode()) {
             case KeyEvent.VK_UP:
